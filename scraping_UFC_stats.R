@@ -61,5 +61,6 @@ data$stance2[data$stance2 %in% c('Open Stance','Sideways','Switch')]='Mixed'
 data$stance2 %>% table(useNA = 'always')
 
 # save clean data as csv.
+name = paste0('UFC_data_cleaned_', Sys.Date(),'.csv') # we want to name our datafile with today's date on it so that if you scrape multiple times you know when you did this one!
 
-write_csv(data,'UFC_data_cleaned.csv')
+write_csv(data,name)
